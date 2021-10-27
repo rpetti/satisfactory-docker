@@ -10,11 +10,11 @@ update () {
     steamcmd +login anonymous +force_install_dir /data/SatisfactoryUpdate +app_update 1690800 +quit
     rsyncresults=$(rsync -ari /data/SatisfactoryUpdate/ /data/Satisfactory/)
     if [ -n "$rsyncresults" ]; then
-        echo No restart needed
-    else
         # run again with --delete just to make sure any old files are deleted (logs, etc)
         rsync -ari --delete /data/SatisfactoryUpdate/ /data/Satisfactory/
         restart
+    else
+        echo Checked for updates but none found
     fi
     echo "ready" > /state
 }
