@@ -16,7 +16,7 @@ VOLUME ["/data/Satisfactory", "/saves"]
 
 RUN mkdir -p /home/satisfactory/.config/Epic/FactoryGame/Saved/ /saves && \
     ln -s /saves /home/satisfactory/.config/Epic/FactoryGame/Saved/SaveGames && \
-    chown -R satisfactory:satisfactory /data
+    chown -R satisfactory:satisfactory /data && \
     chown -R satisfactory:satisfactory /home/satisfactory && \
     chown satisfactory:satisfactory /saves
 
