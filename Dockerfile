@@ -16,8 +16,9 @@ VOLUME ["/data/Satisfactory", "/saves"]
 
 RUN mkdir -p /home/satisfactory/.config/Epic/FactoryGame/Saved/ /saves && \
     ln -s /saves /home/satisfactory/.config/Epic/FactoryGame/Saved/SaveGames && \
-    chown -R satisfactory /home/satisfactory && \
-    chown satisfactory /saves
+    chown -R satisfactory:satisfactory /data
+    chown -R satisfactory:satisfactory /home/satisfactory && \
+    chown satisfactory:satisfactory /saves
 
 ENTRYPOINT [ ]
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
