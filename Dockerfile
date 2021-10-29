@@ -14,7 +14,7 @@ COPY satisfactory.sh /
 
 VOLUME ["/data/Satisfactory", "/saves"]
 
-RUN mkdir -p /home/satisfactory/.config/Epic/FactoryGame/Saved/ /saves && \
+RUN mkdir -p /home/satisfactory/.config/Epic/FactoryGame/Saved/ /data /saves && \
     ln -s /saves /home/satisfactory/.config/Epic/FactoryGame/Saved/SaveGames && \
     chown -R satisfactory /data && \
     chown -R satisfactory /home/satisfactory && \
