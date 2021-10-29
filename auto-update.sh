@@ -16,10 +16,10 @@ update () {
     else
         echo Checked for updates but none found
     fi
-    echo "ready" > /state
+    echo "ready" > /home/satisfactory/state
 }
 
-echo "not-ready" > /state
+echo "not-ready" > /home/satisfactory/state
 
 while(true); do
     update

@@ -1,9 +1,7 @@
 #!/bin/bash
 
-export HOME=/home/satisfactory
-
 while(true); do
-    state=$(cat /state)
+    state=$(cat /home/satisfactory/state)
     if [ "$state" != "ready" ]; then
         sleep 1;
     else

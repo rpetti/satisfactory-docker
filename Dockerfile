@@ -11,6 +11,7 @@ EXPOSE 7777/udp
 COPY supervisord.conf /etc/supervisord.conf
 COPY auto-update.sh /
 COPY satisfactory.sh /
+COPY bootstrap.sh /
 
 VOLUME ["/data/Satisfactory", "/saves"]
 
@@ -21,4 +22,4 @@ RUN mkdir -p /home/satisfactory/.config/Epic/FactoryGame/Saved/ /data /saves && 
     chown satisfactory /saves
 
 ENTRYPOINT [ ]
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+CMD ["/bootstrap.sh"]
