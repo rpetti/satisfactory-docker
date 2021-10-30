@@ -1,6 +1,6 @@
 FROM steamcmd/steamcmd:ubuntu
 
-RUN apt-get update && apt-get install -y supervisor bash rsync && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y supervisor bash rsync busybox-syslogd && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -d /home/satisfactory satisfactory
 
