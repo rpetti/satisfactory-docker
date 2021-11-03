@@ -28,4 +28,4 @@ kill_descendant_processes() {
 
 trap "kill_descendant_processes $$" EXIT
 
-/data/Satisfactory/FactoryServer.sh
+/data/Satisfactory/FactoryServer.sh -NOSTEAM -multihome=$(hostname -i)
