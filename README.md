@@ -16,3 +16,5 @@ This is a container for the official Satisfactory dedicated server. It will auto
 ## Environment Variables
 
 - `AUTO_UPDATE_INTERVAL` amount of time to wait between update checks in seconds, default: `3600`
+- `HEARTBEAT_URL` url to hit when checking server status (eg, for Uptime Kuma)
+- `HEARTBEAT_INTERVAL` time to wait between heartbeats (default 30 seconds)
